@@ -69,7 +69,7 @@ function CardHoverEffectDemo({ projects }: Props) {
     </div>
   );
 }
-export function TypewriterEffectSmoothDemo() {
+function TypewriterEffectSmoothDemo() {
   // A web-based service to trade items with security
 
   const words = [

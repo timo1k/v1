@@ -53,7 +53,7 @@ export default function RootLayout({
   );
 }
 
-export function NavbarDemo() {
+function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
       <Navbar className="top-2" />
