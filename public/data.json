@@ -2,101 +2,141 @@
   {
     "title": "Stripe",
     "description": "A technology company that builds economic infrastructure for the internet.",
-    "link": "/stripe"
+    "link": "/stripe",
+    "tag": "tech",
+    "email": "stripe@example.com"
   },
   {
     "title": "Netflix",
     "description": "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    "link": "/netflix"
+    "link": "/netflix",
+    "tag": "tv",
+    "email": "netflix@example.com"
   },
   {
     "title": "Google",
     "description": "A multinational technology company that specializes in Internet-related services and products.",
-    "link": "/google"
+    "link": "/google",
+    "tag": "tech",
+    "email": "google@example.com"
   },
   {
     "title": "Meta",
     "description": "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    "link": "/meta"
+    "link": "/meta",
+    "tag": "tech",
+    "email": "meta@example.com"
   },
   {
     "title": "Amazon",
     "description": "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    "link": "/amazon"
+    "link": "/amazon",
+    "tag": "tech",
+    "email": "amazon@example.com"
   },
   {
     "title": "Microsoft",
     "description": "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    "link": "/microsoft"
+    "link": "/microsoft",
+    "tag": "tech",
+    "email": "microsoft@example.com"
   },
   {
     "title": "Apple",
     "description": "A multinational technology company that designs, manufactures, and markets consumer electronics, software, and online services.",
-    "link": "/apple"
+    "link": "/apple",
+    "tag": "tech",
+    "email": "apple@example.com"
   },
   {
     "title": "Tesla",
     "description": "An American electric vehicle and clean energy company.",
-    "link": "/tesla"
+    "link": "/tesla",
+    "tag": "tech",
+    "email": "tesla@example.com"
   },
   {
     "title": "SpaceX",
     "description": "An American aerospace manufacturer and space transportation company founded by Elon Musk.",
-    "link": "/spacex"
+    "link": "/spacex",
+    "tag": "tech",
+    "email": "spacex@example.com"
   },
   {
     "title": "Twitter",
     "description": "An American microblogging and social networking service on which users post and interact with messages known as tweets.",
-    "link": "/twitter"
+    "link": "/twitter",
+    "tag": "tech",
+    "email": "twitter@example.com"
   },
   {
     "title": "Intel",
     "description": "An American multinational corporation and technology company headquartered in California.",
-    "link": "/intel"
+    "link": "/intel",
+    "tag": "tech",
+    "email": "intel@example.com"
   },
   {
     "title": "Adobe",
     "description": "An American multinational computer software company focused on the creation of multimedia and creativity software products.",
-    "link": "/adobe"
+    "link": "/adobe",
+    "tag": "tech",
+    "email": "adobe@example.com"
   },
   {
     "title": "Uber",
     "description": "An American technology company that offers vehicles for hire, food delivery (Uber Eats), package delivery, couriers, freight transportation, and, through a partnership with Lime, electric bicycle and motorized scooter rental.",
-    "link": "/uber"
+    "link": "/uber",
+    "tag": "tele",
+    "email": "uber@example.com"
   },
   {
     "title": "IBM",
     "description": "An American multinational technology and consulting company that provides hardware, software, and consulting services.",
-    "link": "/ibm"
+    "link": "/ibm",
+    "tag": "tech",
+    "email": "ibm@example.com"
   },
   {
     "title": "Oracle",
     "description": "An American multinational computer technology corporation headquartered in Austin, Texas.",
-    "link": "/oracle"
+    "link": "/oracle",
+    "tag": "tech",
+    "email": "oracle@example.com"
   },
   {
     "title": "Salesforce",
     "description": "An American cloud-based software company headquartered in San Francisco, California.",
-    "link": "/salesforce"
+    "link": "/salesforce",
+    "tag": "tech",
+    "email": "salesforce@example.com"
   },
   {
     "title": "Cisco",
     "description": "An American multinational technology conglomerate headquartered in San Jose, California.",
-    "link": "/cisco"
+    "link": "/cisco",
+    "tag": "tele",
+    "email": "cisco@example.com"
   },
   {
     "title": "Sony",
     "description": "A Japanese multinational conglomerate corporation headquartered in Kōnan, Minato, Tokyo.",
-    "link": "/sony"
+    "link": "/sony",
+    "tag": "tele",
+    "email": "sony@example.com"
   },
   {
     "title": "Samsung",
     "description": "A South Korean multinational conglomerate headquartered in Samsung Town, Seoul.",
-    "link": "/samsung"
+    "link": "/samsung",
+    "tag": "tech",
+    "email": "samsung@example.com"
   },
   {
     "title": "LG",
     "description": "A South Korean multinational conglomerate corporation.",
-    "link": "/lg"
+    "link": "/lg",
+    "tag": "tech",
+    "email": "lg@example.com"
   }
 ]

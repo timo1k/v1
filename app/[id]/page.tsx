@@ -11,6 +11,7 @@ interface Project {
   title: string;
   description: string;
   link: string;
+  email: string;
 }
 
 export default function Page({ params }: any) {
@@ -70,6 +71,11 @@ function BackgroundGradientDemo({ project }: { project: Project }) {
         <div className="text-sm text-neutral-600 dark:text-neutral-400">
           {project.description}
         </div>
+        <br></br>
+        <div className="text-sm text-neutral-600 dark:text-neutral-400">
+          <h1>contant me: {project.email}</h1>
+        </div>
+
         <Link href={project.link}>LINKKKKKK</Link>
       </BackgroundGradient>
     </div>
