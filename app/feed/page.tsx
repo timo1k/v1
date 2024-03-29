@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { HoverEffect } from "../card-hover-effect";
+import { HoverEffect } from "../../components/ui/card-hover-effect";
 
 interface Project {
   title: string;

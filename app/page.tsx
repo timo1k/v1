@@ -1,11 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Input } from "@chakra-ui/react";
-import { HoverEffect } from "./card-hover-effect";
-import { TypewriterEffectSmooth } from "./typewriter-effect";
+import { HoverEffect } from "../components/ui/card-hover-effect";
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 import Link from "next/link";
-import { LampContainer } from "./lamp";
-import { Search } from "lucide-react";
 
 interface Project {
   title: string;
@@ -20,7 +17,6 @@ interface Props {
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
-  const [searchQuery, setSearchQuery] = useState<string | null>(null);
 
   useEffect(() => {
     // Fetching data asynchronously
@@ -40,32 +36,6 @@ export default function Home() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/data.json");
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const allProjects: Project[] = await response.json();
-
-        const filteredProjects = searchQuery
-          ? allProjects.filter((project) => project.title == searchQuery)
-          : allProjects;
-
-        setProjects(filteredProjects);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, [searchQuery]);
-
-  const handleSearchChange = (value: string) => {
-    setSearchQuery(value === searchQuery ? null : value);
-  };
-
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="text-center">
@@ -73,20 +43,6 @@ export default function Home() {
         <br></br>
         <br></br>
         <br></br>
-
-        {/* <div className="relative">
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input
-            type="search"
-            placeholder="Search products..."
-            className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
-            value={searchQuery || ""}
-            onChange={(e) => {
-              handleSearchChange(e.target.value);
-            }}
-          />
-        </div> */}
-
         <CardHoverEffectDemo projects={projects} />
       </div>
     </div>
