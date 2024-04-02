@@ -1,6 +1,25 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { HoverEffect } from "../../components/ui/card-hover-effect";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { collection, getDocs, DocumentData } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
 
 interface Project {
   title: string;
@@ -9,8 +28,21 @@ interface Project {
   tag: string;
 }
 
+// interface Props {
+//   projects: Project[];
+// }
+
+interface Items {
+  id: string;
+  title: string;
+  link: string;
+  tag: string;
+  description: string;
+  user_id: string;
+}
+
 interface Props {
-  projects: Project[];
+  projects: Items[];
 }
 
 const items = ["tele", "tv", "tech"];
@@ -18,6 +50,22 @@ const items = ["tele", "tv", "tech"];
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
+
+  const [users, setUsers] = useState<Items[]>([]);
+
+  useEffect(() => {
+    async function fetchItems() {
+      const querySnapshot = await getDocs(collection(db, "Item"));
+      const usersData: Items[] = [];
+      querySnapshot.forEach((doc: DocumentData) => {
+        usersData.push({ id: doc.id, ...doc.data() });
+      });
+      console.log(usersData);
+      setUsers(usersData);
+    }
+
+    fetchItems();
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,6 +76,7 @@ export default function Home() {
         }
         const fetchedProjects: Project[] = await response.json();
         setProjects(fetchedProjects);
+        console.log(projects);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -83,8 +132,11 @@ export default function Home() {
         </select>
       </label>
       <div className="text-center">
-        <div>
+        {/* <div>
           <CardHoverEffectDemo projects={projects} />
+        </div> */}
+        <div>
+          <CardHoverEffectDemo projects={users} />
         </div>
       </div>
     </div>
